@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    #container {
+
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: green;
+
+    }
+
+    #animate {
+
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: red;
+
+    }
+
+    #animate2 {
+
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: burlywood;
+
+    }
+
+    #animate3 {
+
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: brown;
+
+    }
+</style>
+
+<body>
+
+    <p> <button onclick="cross()">Click</button> </p>
+    <div id="container">
+        <div id="animate"></div>
+        <div id="animate2"> </div>
+        <div id="animate3"></div>
+    </div>
+    <script>
+
+        function cross() {
+
+            move();
+            move2();
+
+            let id = null;
+            const el = document.getElementById("animate");
+            let pos = 0;
+
+            clearInterval(id);
+
+            id = setInterval(frame, 6);
+
+            function frame() {
+
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+
+                    pos++;
+                    el.style.top = pos + "px";
+                    el.style.left = pos + "px";
+
+                }
+            }
+        }
+
+        function move() {
+
+            let id = null;
+            const el = document.getElementById("animate2");
+            let pos = 0;
+
+            clearInterval(id);
+
+            id = setInterval(frame, 6);
+
+            function frame() {
+
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+
+                    pos++;
+                    el.style.top = pos + "px";
+                    el.style.top = pos + "px";
+
+                }
+            }
+
+        }
+        function move2() {
+
+            let id = null;
+            const el = document.getElementById("animate3");
+            let pos = 0;
+
+            clearInterval(id);
+
+            id = setInterval(frame, 6);
+
+            function frame() {
+
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+
+                    pos++;
+                    el.style.left = pos + "px";
+                    el.style.left = pos + "px";
+
+                }
+            }
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
