@@ -1,0 +1,28 @@
+<html>
+
+<body>
+
+    <h1>JS array</h1>
+
+    <p>Array elemnt by forEach loop</p>
+    <p id="demo"></p>
+
+    <script>
+
+        const cars = ["Rahim", "Sarker", "Jarna"];
+        let text = "<ul>"
+        cars.forEach(my);
+        text += "</ul>";
+
+        document.getElementById("demo").innerHTML = text;
+
+        function my(value) {
+            text += "<li>" + value + "</li>";
+        }
+
+
+    </script>
+
+</body>
+
+</html>
